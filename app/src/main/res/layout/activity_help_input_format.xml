@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivityHelpInputFormat" android:orientation="vertical"
+        android:background="#9cc0f6">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#03378b"
+                android:theme="?attr/actionBarTheme"
+                android:minHeight="?attr/actionBarSize" android:id="@+id/inputFormat_toolbar"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/inputFormat_backBtn"
+                android:background="@drawable/back_button" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/inputFormat_toolbar"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.044"/>
+        <TextView
+                android:text="Input format"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/inputFormat_actionbar_textView"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp" android:textSize="24sp"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/inputFormat_toolbar"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/inputFormat_backBtn"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_marginLeft="64dp"
+                android:layout_marginStart="64dp" android:textStyle="bold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="16dp">
+            <TextView
+
+                    android:layout_width="366dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inputFormat_textView13"
+                    android:textColor="#03378b"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="The input file must be a .txt format in the proper order. To explain the proper order, you need to first know how the game works. The game consists of a 10x10 table. Sections in the table are numbered from 0 to 99. The number determines location of the section:"
+                    android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="540dp"
+                    app:srcCompat="@drawable/inputformat_1"
+                    android:id="@+id/inputFormat_imageView6" android:layout_marginBottom="16dp"/>
+            <TextView
+                    android:text="Blocks inside the table also have numbers. Depending on your arrangement they can be from 1 to 100. 100 always must be the goal block which you want to unblock. To tell the app, which section is related to which block you will need an expression like this (order matters, spaces do not):\n{loc=4, blk=3}\n This means section 4 is filled by block 3.\nBlocks can be horizontal or vertical or square. For example:\nHorizontal: {loc=0, blk=1} , {lock=1, blk=1}\nVertical: {loc=0, blk=1} , {lock=10, blk=1}\nSquare: {loc=0, blk=1}\nBe careful to determine blocks correctly otherwise the app won't work properly.\n To define all the arrangements inside table you will need to define all sections that have a related block, in brackets (order does not matter):\n level 1:\n[{loc=43, blk=1},\n{loc=53, blk=1},\n{loc=63, blk=1},\n{loc=73, blk=1},\n{loc=40, blk=100},\n{loc=41, blk=100},\n{loc=42, blk=100} ]\nYou will also need to define an exit gate. The gate is determined by the number of the section that is related to. To do so, add a &quot;/&quot; AFTER the brackets which contain blocks arrangement. Set your preferred section to exit gate with an expression like this:\n[...]/exit sec = [loc=29]\nBe careful about exit section and your goal block. Exit section must be one of the sections in the borders of table and Goal block should be able to reach the exit section. Add nothing more to the format.\nHere is a complete example of an input file:\n[{loc=43, blk=1},\n{loc=53, blk=1},\n{loc=63, blk=1},\n{loc=73, blk=1},\n{loc=40, blk=100},\n{loc=41, blk=100},\n{loc=42, blk=100} ]\n/Exit Section = [loc=49]\n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView14"
+                    android:textColor="#03378b"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

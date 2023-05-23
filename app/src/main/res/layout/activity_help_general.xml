@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivityHelpGeneral" android:background="#9cc0f6"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#03378b"
+                android:theme="?attr/actionBarTheme"
+                android:minHeight="?attr/actionBarSize" android:id="@+id/generals_toolbar"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/general_backBtn"
+                android:background="@drawable/back_button" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/generals_toolbar"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.044"/>
+        <TextView
+                android:text="General"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/general_actionbar_textView"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp" android:textSize="24sp"
+                android:textColor="#ffffff" android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/generals_toolbar"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/general_backBtn"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_marginLeft="64dp"
+                android:layout_marginStart="64dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="16dp">
+
+            <TextView
+                    android:text="Unblock Me 10x10 is a puzzle game that helps you have fun and train your brain!\nThere are two game modes in this game: &quot;Default Mode&quot; and &quot;Custom Mode&quot;.\nDefault mode: We have predefined 20 levels in the game that form our default mode. You can find them through &quot;Home&quot; -> &quot;Levels&quot;:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/helptext"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.012"
+                    android:textColor="#03378b"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="540dp" app:srcCompat="@drawable/help_general_1"
+                    android:id="@+id/helpgeneralimage1"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/helptext01"
+                    android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="540dp" app:srcCompat="@drawable/help_general_2"
+                    android:id="@+id/helpgeneralimage2" android:layout_marginBottom="16dp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:text="Custom mode: In this mode you can upload your own custom level in a proper text file format and play it. To do so you should tap on &quot;Custom Level&quot; button in home page and then you should select your custom level file from storage. Note that your file must have a specific format which is explained in &quot;Home&quot; -> &quot;Help&quot; -> &quot;Input format&quot; section:"
+                    android:textColor="#03378b"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="540dp" app:srcCompat="@drawable/help_general_3"
+                    android:id="@+id/imageView4" android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="540dp" app:srcCompat="@drawable/help_general_4"
+                    android:id="@+id/imageView5" android:layout_marginBottom="16dp"/>
+            <TextView
+                    android:text="Once you select one of default levels or a proper custom level from storage, the game would be set up. You can learn about how to play the game in &quot;Home&quot; -> &quot;Help&quot; -> &quot;How to play&quot; section\n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView9"
+                    android:textColor="#03378b"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

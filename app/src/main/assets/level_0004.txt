@@ -1,0 +1,38 @@
+val InitialState =
+[{loc=19, blk=1},
+{loc=29, blk=1},
+{loc=39, blk=1},
+{loc=49, blk=1},
+{loc=69, blk=2},
+{loc=79, blk=2},
+{loc=89, blk=2},
+{loc=99, blk=2},
+{loc=47, blk=3},
+{loc=1, blk=4},
+{loc=2, blk=4},
+{loc=3, blk=4},
+{loc=4, blk=4},
+{loc=5, blk=5},
+{loc=6, blk=5},
+{loc=7, blk=5},
+{loc=8, blk=5},
+{loc=0, blk=6},
+{loc=10, blk=6},
+{loc=20, blk=6},
+{loc=70, blk=7},
+{loc=71, blk=7},
+{loc=72, blk=7},
+{loc=73, blk=7},
+{loc=74, blk=7},
+{loc=75, blk=7},
+{loc=24, blk=8},
+{loc=34, blk=8},
+{loc=44, blk=8},
+{loc=54, blk=8},
+{loc=40, blk=100},
+{loc=41, blk=100},
+{loc=42, blk=100}
+]
+/
+Exit Section = [loc=49]
+.
