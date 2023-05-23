@@ -29,7 +29,7 @@ public class ActivityHelpAbout extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AudioPlayer.playButtonPressSound(ActivityHelpAbout.this);
-                Uri uri = Uri.parse("https://github.com/Javadi1729/UnblockMe10x10/tree/master");
+                Uri uri = Uri.parse("https://github.com/Javadi1729/BachelorsProject_UnblockMe10x10");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
